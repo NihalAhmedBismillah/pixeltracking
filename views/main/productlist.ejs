@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <% for (var i = 0; i < products.length; i++) { %>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="<%= products[i].logUrl %>">
+                        <img src="<%= products[i].cover %>">
+                        <!-- <img src="./../images/nihal.jpg"> -->
+                        <div class="caption">
+                            <h5>
+                                <%= products[i]._id %>
+                                    </h3>
+                                    <h3>
+                                        <%= products[i].name %>
+                                    </h3>
+                                    <p>
+                                        <%= products[i].category %>
+                                    </p>
+                                    <p>Rs.
+                                        <%= products[i].price %>
+                                    </p>
+                                    <p>Log Url
+                                        <%= products[i].logUrl %>
+                                    </p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
